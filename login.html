@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/css/fakeLoader.css">
+</head>
+<body>
+<div class="container">
+    <div class="login">
+        <form action="homepagelog.html">
+            <h1>login</h1>
+            <hr>
+            <br>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" placeholder="Username">
+            <label for="input_password">Password</label>
+            <input id="input_password" type="password" name="password" placeholder="Password">
+            <div class="pw">
+                <label for="show_password">
+                    <input type="checkbox" id="show_password">
+                    Tampilkan password
+                </label>
+            </div>
+            <button type="submit">login</button>
+            <p>
+                don't have an account? <a href="regis.html">sign in</a>
+            </p>
+        </form>
+    </div>
+</div>
+<div class="fakeLoader"></div>
+<script>
+    const inputPassword = document.getElementById("input_password");
+    const showPassword = document.getElementById("show_password");
+
+    showPassword.addEventListener("change", (e) => {
+        if(e.target.checked) {
+            inputPassword.setAttribute("type", "text");
+        } else {
+            inputPassword.setAttribute("type", "password");
+        }
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/fakeLoader.js"></script>
+<script>
+    $(document).ready(function () {
+        $.fakeLoader({
+            bgColor: '#ffa12c',
+            spinner:"spinner5"
+        });
+    });
+</script>
+</body>
+</html>

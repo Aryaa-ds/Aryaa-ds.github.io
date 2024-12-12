@@ -1,0 +1,75 @@
+body{
+    background: url(/img/smk2.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+nav {
+    display: flex;
+    gap: 25px;
+    background-color: #a51717;
+    padding: 20px 15px 15px 15px;
+    margin: none;
+    position: fixed;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .container-menu {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    background-color: #a51717;
+  }
+  .navbar-nav {
+    display: flex;
+    gap: 25px;
+  }
+  .link-nav {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px;
+    justify-items: center;
+  }
+  .navbar {
+    padding: 0px;
+  }
+  .linknav {
+    width: 24px;
+    height: 24px;
+  }
+  .navbar-toggler {
+    margin-right: 75vw;
+  }
+  .isi img{
+    position: absolute;
+    right: 5%;
+    top: 45%;
+    width: 45vh;
+  }
+  .isi .anggota{
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .isi p{
+    font-size: 1.2rem;
+  }
+  .isi{
+    height: 85vh;
+    display: grid;
+    padding: 10px 1rem;
+    background-color: #ffffff7e;
+  }
+  #footer {
+    background-color: #a51717;
+    margin-left: 0;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }

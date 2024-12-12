@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign in</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/css/fakeLoader.css">
+</head>
+<body>
+<div class="container">
+    <div class="register">
+        <form action="login.html">
+            <h1>sign in</h1>
+            <hr>
+            <br>
+            <p></p>
+            <label for="">Email</label>
+            <input type="text" name="email" placeholder="email">
+            <label for="">Username</label>
+            <input type="text" name="Username" placeholder="Username">
+            <label for="">password</label>
+            <input id="input_password" type="password" name="email" placeholder="password">
+            <div class="pw">
+                <label for="show_password">
+                    <input type="checkbox" id="show_password">
+                    Tampilkan password
+                </label>
+            </div>
+            <button>sign in</button>
+        </form>
+    </div>
+</div>
+<div class="fakeLoader"></div>
+
+<script>
+    const inputPassword = document.getElementById("input_password");
+    const showPassword = document.getElementById("show_password");
+
+    showPassword.addEventListener("input", (e) => {
+        if(e.target.checked) {
+        inputPassword.setAttribute("type", "text");
+    } else {
+            inputPassword.setAttribute("type", "password");
+        }
+    })
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="/js/fakeLoader.js"></script>
+<script>
+    $(document).ready(function () {
+        $.fakeLoader({
+            bgColor: '#ffa12c',
+            spinner:"spinner5"
+        });
+    });
+</script>
+</body>
+</html>

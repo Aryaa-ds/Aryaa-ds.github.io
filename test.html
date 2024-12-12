@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            width: 200px;
+            vertical-align: top;
+        }
+        .cart {
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+        }
+        .cart ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Daftar Produk</h1>
+<div class="all">
+    <div class="produk-top">
+        <div class="card" data-price="80000">
+            <img src="/img/rojo_lele-.png" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Beras Rojo lele <br> 5KG</h5>
+                <p class="card-text">Rp 80.000</p>
+                <br>
+                <a href="#" class="btn1 btn1-primary" onclick="addToCart(this)">Beli</a>
+            </div>
+        </div>
+        <div class="card" data-price="72000">
+            <img src="/img/dua ikan mas_11zon.png" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Beras dua ikan mas <br> 5KG</h5>
+                <p class="card-text">Rp 72.000</p>
+                <br>
+                <a href="#" class="btn1 btn1-primary" onclick="addToCart(this)">Beli</a>
+            </div>
+        </div>
+        <div class="card" data-price="72000">
+            <img src="/img/semar-.png" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Beras semar <br> 5KG</h5>
+                <p class="card-text">Rp 72.000</p>
+                <br>
+                <a href="#" class="btn1 btn1-primary" onclick="addToCart(this)">Beli</a>
+            </div>
+        </div>
+        <div class="card" data-price="25000">
+            <img src="/img/kacang ijo import_11zon.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Kacang ijo import <br> 1kg</h5>
+                <p class="card-text">Rp 25.000</p>
+                <br>
+                <a href="#" class="btn1 btn1-primary" onclick="addToCart(this)">Beli</a>
+            </div>
+        </div>
+    </div>
+    <div class="produk-bottom">
+        <div class="card" data-price="18000">
+            <img src="/img/ketan ca singkong_11zon.jpeg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Ketan cap singkong <br> 1kg</h5>
+                <p class="card-text">Rp 18.000</p>
+                <br>
+                <a href="#" class="btn1 btn1-primary" onclick="addToCart(this)">Beli</a>
+            </div>
+        </div>
+        <div class="card" data-price="17500">
+            <img src="/img/ketan ca singkong_11zon.jpeg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Ketan <br> 1kg</h5>
+                <p class="card-text">Rp 17.500</p>
+                <br>
+                <a href="#" class="btn1 btn1-primary" onclick="addToCart(this)">Beli</a>
+            </div>
+        </div>
+        <div class="card" data-price="14000">
+            <img src="/img/beras 1_11zon .png" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Beras eceran 1 <br> 1kg</h5>
+                <p class="card-text">Rp 14.000</p>
+                <br>
+                <a href="#" class="btn1 btn1-primary" onclick="addToCart(this)">Beli</a>
+            </div>
+        </div>
+        <div class="card" data-price="13500">
+            <img src="/img/beras22.jpg" class="card-img-top">
+            <div class="card-body">
+                <h5 class="card-title">Beras eceran 2 <br> 1kg</h5>
+                <p class="card-text">Rp 13.500</p>
+                <br>
+                <a href="#" class="btn1 btn1-primary" onclick="addToCart(this)">Beli</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cart">
+    <h2>Keranjang Belanja</h2>
+    <ul id="cartItems"></ul>
+    <p id="totalPrice">Total: Rp 0</p>
+</div>
+
+<script>
+    let cart = [];
+    let total = 0;
+
+    function addToCart(button) {
+        const card = button.closest('.card');
+        const productName = card.querySelector('.card-title').innerText;
+        const productPrice = parseInt(card.getAttribute('data-price'));
+
+        cart.push({ name: productName, price: productPrice });
+        total += productPrice;
+        updateCart();
+    }
+
+    function updateCart() {
+        const cartItems = document.getElementById('cartItems');
+        cartItems.innerHTML = '';
+
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.name} - Rp ${item.price}`;
+            cartItems.appendChild(li);
+        });
+
+        document.getElementById('totalPrice').textContent = `Total: Rp ${total}`;
+    }
+</script>
+
+</body>
+</html>
+</body>
+</html>
