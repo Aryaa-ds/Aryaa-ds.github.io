@@ -1,0 +1,135 @@
+body {
+  background-size: cover;
+  width: 90vw;
+  height: auto;
+  background-color: rgb(240, 248, 255);
+  margin: 0;
+}
+.all {
+  position: relative;
+  background-image: url(/img/bgsawahemaman.jpeg);
+  height: 55rem;
+  width: 100vw;
+  background-size: cover;
+  margin: 0;
+}
+.isi {
+  display: grid;
+  position: absolute;
+  justify-content: center;
+  top: 25%;
+  right: 40%;
+}
+.gambar img {
+  width: 40vw;
+  position: absolute;
+  right: 5%;
+  top: 55%;
+  z-index: 10;
+}
+.button-beli input {
+  background-color: rgb(5, 63, 5);
+  padding: 10px 15px;
+  border: none;
+  border-radius: 35px;
+  color: aliceblue;
+  font-size: 1rem;
+  height: 2.5rem;
+}
+.button-beli input:hover {
+  background-color: aliceblue;
+  color: rgb(7, 141, 7);
+  cursor: pointer;
+  box-shadow: 0px 0px 20px rgb(0, 0, 0);
+  scale: 0.9;
+}
+.text {
+  font-size: 2rem;
+  color: #eceae8;
+}
+.footer img {
+  width: 100vw;
+  height: 150px;
+  position: absolute;
+  top: 85%;
+}
+.produk .text {
+  color: black;
+  border: 3px solid black;
+  padding: 15px;
+  width: 100vw;
+  margin-top: 25px;
+  justify-content: center;
+  display: flex;
+}
+.card {
+  width: 10rem;
+  margin: 20px;
+  display: grid;
+  justify-content: center;
+  border-radius: 20px;
+  border: 1px solid black;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+.wa {
+  z-index: 100;
+  position: fixed;
+  padding: 2rem;
+  right: 0;
+  top: 67%;
+}
+.wa img {
+  height: 4rem;
+  width: 4rem;
+}
+.slider {
+  position: relative;
+  max-width: 800px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 50%;
+  text-align: center;
+  padding: 55px;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: -130%;
+}
+footer {
+  background-color: #a51717;
+  width: 100vw;
+  padding: 20px;
+}
+footer #copy {
+  display: flex;
+  justify-content: center;
+}

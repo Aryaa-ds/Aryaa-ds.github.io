@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pesan</title>
+    <link rel="stylesheet" href="pesan.css" />
+    <link rel="stylesheet" href="/css/fakeLoader.css" />
+  </head>
+  <body>
+    <div class="thank-you-container">
+      <div class="thank-you-card">
+        <h1>Terima Kasih!</h1>
+        <h2>&#128536;</h2>
+        <p>
+          Terima kasih telah berbelanja di toko kami. Pesanan Anda akan segera
+          kami proses dan kirimkan!
+        </p>
+        <p class="info">
+          Kami sedang menyiapkan pesanan Anda untuk dikirim. Harap di tunggu
+          dengan sabar !
+        </p>
+        <a href="homepagelog.html"
+          ><button class="back-home">Kembali ke Beranda</button></a
+        >
+      </div>
+    </div>
+    <div class="fakeloader"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/fakeLoader.js"></script>
+    <script>
+      $(document).ready(function () {
+          $.fakeLoader({
+              bgColor: '#ffa12c',
+              spinner:"spinner5"
+          });
+      });
+    </script>
+  </body>
+</html>
